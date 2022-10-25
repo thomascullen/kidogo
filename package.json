@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "compile": "scripts/compile.js"
+  },
+  "dependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-react-jsx": "^7.19.0",
+    "@heroicons/react": "^2.0.12",
+    "lodash": "^4.17.21",
+    "prettier": "^2.7.1",
+    "svg-parser": "^2.0.4",
+    "svgo": "^3.0.0"
+  }
+}

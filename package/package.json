@@ -1,0 +1,21 @@
+{
+  "name": "kidogo",
+  "version": "1.0.0",
+  "description": "A growing collection of icons in 5 different styles designed for the web.",
+  "author": "Thomas Cullen",
+  "license": "MIT",
+  "homepage": "https://kidogoicons.com",
+  "files": [
+    "duo",
+    "duoline",
+    "duotone",
+    "outline",
+    "solid"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">= 16"
+  }
+}

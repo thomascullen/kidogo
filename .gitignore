@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+
+/website/.cache
+/website/build
+/website/public/build
+
+/package/duo
+/package/solid
+/package/duoline
+/package/duotone
+/package/outline
+.env
