@@ -556,6 +556,12 @@ video {
 .hidden {
   display: none;
 }
+.h-6 {
+  height: 1.5rem;
+}
+.w-6 {
+  width: 1.5rem;
+}
 .w-full {
   width: 100%;
 }
@@ -744,6 +750,7 @@ header {
   font-weight: 500;
   background: #a1fff9;
   border: none;
+  gap: 12px;
   font-size: 18px;
   cursor: pointer;
   display: inline-flex;
@@ -758,6 +765,12 @@ header {
     width: auto
 }
   }
+
+.btn-outline {
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 0.5);
+}
 
 select {
   width: 100%;
@@ -1043,8 +1056,8 @@ section p {
 
 @media (min-width: 768px) {
 
-  .md\:block {
-    display: block;
+  .md\:flex {
+    display: flex;
   }
 
   .md\:inline-flex {

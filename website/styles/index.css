@@ -111,6 +111,7 @@ header {
   background: #a1fff9;
   border: none;
   display: inline-flex;
+  gap: 12px;
   font-size: 18px;
   cursor: pointer;
   display: inline-flex;
@@ -121,6 +122,12 @@ header {
   @media screen(md) {
     width: auto;
   }
+}
+
+.btn-outline {
+  color: white;
+  background: transparent;
+  border: 1px solid rgb(255 255 255 / 0.5);
 }
 
 select {

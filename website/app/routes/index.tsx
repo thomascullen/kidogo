@@ -8,6 +8,7 @@ import duoline from "kidogo/duoline";
 import duotone from "kidogo/duotone";
 import Header from "~/components/Header";
 import ColorPicker from "~/components/ColorPicker";
+import FigmaLogo from "~/components/FigmaLogo";
 
 const STYLES = {
   solid,
@@ -44,7 +45,14 @@ export default function Index() {
             <ColorPicker value={secondaryColor} onChange={setSecondaryColor} />
             <StyleSelector currentStyle={style} setStyle={setStyle} />
           </div>
-          <div className="shrink-0 hidden md:block">
+          <div className="shrink-0 hidden md:flex gap-4">
+            <a
+              href="https://www.figma.com/community/file/1171757667324008945"
+              className="btn btn-outline"
+            >
+              <FigmaLogo />
+              Figma
+            </a>
             <a href="https://github.com/thomascullen/kidogo" className="btn">
               Get Started
             </a>
