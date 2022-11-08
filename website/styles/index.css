@@ -4,7 +4,7 @@
 @import url("https://rsms.me/inter/inter.css");
 
 :root {
-  --grid-size: 56px;
+  --grid-size: 70px;
   --guideDashedColor: blue;
 }
 
@@ -46,54 +46,40 @@ header {
   color: rgb(255 255 255 / 0.8);
 }
 
-.icon-grid-container {
+.icon-grid {
+  padding: 0 24px;
   overflow-x: scroll;
   margin-bottom: 40px;
 
-  .icon-grid {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    width: calc(var(--grid-size) * 20);
-
-    @media screen(md) {
-      width: auto;
-    }
-  }
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  width: auto;
 }
 
 .container {
   margin: 0 auto;
-  padding: 40px 0;
-  max-width: calc(var(--grid-size) * 20);
-
-  @media (max-width: 1200px) {
-    max-width: calc(var(--grid-size) * 16);
-  }
-
-  @media (max-width: 1000px) {
-    max-width: calc(var(--grid-size) * 12);
-  }
-
-  @media (max-width: 800px) {
-    max-width: calc(var(--grid-size) * 11);
-  }
-
-  @media (max-width: 600px) {
-    max-width: calc(var(--grid-size) * 6);
-  }
+  padding: 40px 24px 0 24px;
+  max-width: 1100px;
 }
 
 .grid-cell {
-  padding: 8px;
+  gap: 28px;
   display: flex;
-  user-select: none;
-  align-items: center;
+  padding: 36px 0 20px 0;
+  border-radius: 24px;
+  background: #161425;
   flex-direction: column;
   justify-content: center;
-  width: var(--grid-size);
-  height: var(--grid-size);
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23FFFFFF26' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  align-items: center;
+
+  span {
+    width: 100%;
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .icon {

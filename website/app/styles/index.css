@@ -547,9 +547,6 @@ video {
 .mb-12 {
   margin-bottom: 3rem;
 }
-.mb-8 {
-  margin-bottom: 2rem;
-}
 .flex {
   display: flex;
 }
@@ -565,11 +562,8 @@ video {
 .shrink-0 {
   flex-shrink: 0;
 }
-.flex-col {
-  flex-direction: column;
-}
-.place-items-center {
-  place-items: center;
+.grid-cols-\[repeat\(auto-fill\2c minmax\(8rem\2c 1fr\)\)\] {
+  grid-template-columns: repeat(auto-fill,minmax(8rem,1fr));
 }
 .items-center {
   align-items: center;
@@ -583,16 +577,22 @@ video {
 .gap-2 {
   gap: 0.5rem;
 }
-.gap-12 {
-  gap: 3rem;
+.gap-4 {
+  gap: 1rem;
 }
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.pt-10 {
+  padding-top: 2.5rem;
+}
+.pb-16 {
+  padding-bottom: 4rem;
 }
 .text-center {
   text-align: center;
@@ -635,17 +635,10 @@ video {
 .outline {
   outline-style: solid;
 }
-.transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 @import url("https://rsms.me/inter/inter.css");
 
 :root {
-  --grid-size: 56px;
+  --grid-size: 70px;
   --guideDashedColor: blue;
 }
 
@@ -687,72 +680,41 @@ header {
   color: rgb(255 255 255 / 0.8);
 }
 
-.icon-grid-container {
+.icon-grid {
+  padding: 0 24px;
   overflow-x: scroll;
   margin-bottom: 40px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  width: auto;
 }
-
-.icon-grid-container .icon-grid {
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    width: calc(var(--grid-size) * 20);
-  }
-
-@media (min-width: 768px) {
-
-.icon-grid-container .icon-grid {
-      width: auto
-  }
-    }
 
 .container {
   margin: 0 auto;
-  padding: 40px 0;
-  max-width: calc(var(--grid-size) * 20);
+  padding: 40px 24px 0 24px;
+  max-width: 1100px;
 }
-
-@media (max-width: 1200px) {
-
-.container {
-    max-width: calc(var(--grid-size) * 16)
-}
-  }
-
-@media (max-width: 1000px) {
-
-.container {
-    max-width: calc(var(--grid-size) * 12)
-}
-  }
-
-@media (max-width: 800px) {
-
-.container {
-    max-width: calc(var(--grid-size) * 11)
-}
-  }
-
-@media (max-width: 600px) {
-
-.container {
-    max-width: calc(var(--grid-size) * 6)
-}
-  }
 
 .grid-cell {
-  padding: 8px;
+  gap: 28px;
   display: flex;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  align-items: center;
+  padding: 36px 0 20px 0;
+  border-radius: 24px;
+  background: #161425;
   flex-direction: column;
   justify-content: center;
-  width: var(--grid-size);
-  height: var(--grid-size);
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23FFFFFF26' stroke-width='1' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  align-items: center;
 }
+
+.grid-cell span {
+    width: 100%;
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
 
 .icon {
   width: 24px;
@@ -1072,6 +1034,13 @@ section p {
           text-decoration-line: underline;
 }
 
+@media (min-width: 640px) {
+
+  .sm\:pt-11 {
+    padding-top: 2.75rem;
+  }
+}
+
 @media (min-width: 768px) {
 
   .md\:block {
@@ -1090,6 +1059,10 @@ section p {
     gap: 2rem;
   }
 
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
+
   .md\:text-\[52px\] {
     font-size: 52px;
   }
@@ -1102,11 +1075,8 @@ section p {
 
 @media (min-width: 1024px) {
 
-  .lg\:flex-row {
-    flex-direction: row;
-  }
-
-  .lg\:gap-20 {
-    gap: 5rem;
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
